@@ -15,15 +15,16 @@ the whole algorithm is like:
 
 ```javascript
 
-get(object, pathString):
-componentArray = getComponent(pathString);
-index = 0;
-len = componentArray.length;
-o = object;
+function get(object, pathString) {
+    const componentArray = getComponent(pathString);
+    let index = 0;
+    const len = componentArray.length;
+    let o = object;
 
-while(o != null && index < len) {
-    o = o[componentArrary[index++]];
+    while(o != null && index < len) {
+        o = o[componentArrary[index++]];
+    }
+
+    return (index && index == length) ? object : undefined
 }
-
-return (index && index == length) ? object : undefined
 ```
